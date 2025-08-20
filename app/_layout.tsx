@@ -32,7 +32,15 @@ function AppContent() {
       }}
     >
       {isAuthenticated ? (
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="seed-data" options={{ 
+            headerShown: true, 
+            title: 'Veri Yönetimi',
+            headerStyle: { backgroundColor: COLORS.background },
+            headerTintColor: COLORS.text
+          }} />
+        </>
       ) : (
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
       )}

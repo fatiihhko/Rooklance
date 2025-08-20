@@ -544,6 +544,13 @@ export default function CampaignsScreen() {
           <Image source={require('../../assets/logo.png')} style={styles.logoImage} />
         </View>
         <View style={styles.headerIcons}>
+          <IconButton
+            icon="database"
+            iconColor={COLORS.text}
+            size={24}
+            onPress={() => router.push('/seed-data')}
+            style={{ marginRight: 8 }}
+          />
           <View style={styles.notificationButton}>
             <IconButton
               icon="bell"
